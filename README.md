@@ -4,9 +4,16 @@ The Imixs-Spring project is a place providing integration examples. Imixs-Workfl
 Imixs-Workflow Spring Examples
 
 
-Imixs is based on Jakarta EE and the Microprofile standard. Thanks to its powerful interfaces, Imixs-Workflow  can easily be integrated with other platforms. In this project we show integration examples for the Spring Framework. If you have any questions about Imixs-Worklfow and Spring feel free to ask your questions [here]().
+Imixs is based on Jakarta EE and the Microprofile standard. Thanks to its powerful interfaces, Imixs-Workflow  can easily be integrated with other platforms. In this project we show integration examples for the Spring Framework.
 
-## Project Dependencies
+**Note**: If you want to run Imixs-Workflow as a microservice take a look into the [Imixs-Microservice](https://github.com/imixs/imixs-microservice) project. If you want to call the Imixs-Workflow Rest-API you just need the [Imixs-Melman library](https://github.com/imixs/imixs-melman) which provides a convenient rest client based on Jax-RS API. 
+ 
+
+If you have any questions about Imixs-Worklfow and Spring feel free to ask your questions [here](https://github.com/imixs/imixs-spring/issues).
+
+
+
+## Spring Project Dependencies
 
 To get started with the examples, you need to include Spring MVC in your Maven pom.xml only. See the following example:
 
