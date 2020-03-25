@@ -10,31 +10,19 @@ Imixs is based on Jakarta EE and the Microprofile standard. Thanks to its powerf
 
 To get started with the examples, you need to include Spring MVC in your Maven pom.xml only. See the following example:
 
-
-	<properties>
-		<org.imixs.workflow.version>5.1.9</org.imixs.workflow.version>
-		<spring.version>5.2.5.RELEASE</spring.version>
-	</properties>
-
+	...
+		<properties>
+			<org.imixs.workflow.version>5.1.9</org.imixs.workflow.version>
+			<spring.version>5.2.5.RELEASE</spring.version>
+		</properties>
+	
 		<dependencies>
 		
 			<!-- Imixs Workflow core dependencies -->
 			<dependency>
 				<groupId>org.imixs.workflow</groupId>
-				<artifactId>imixs-workflow-engine</artifactId>
+				<artifactId>imixs-workflow-core</artifactId>
 				<version>${org.imixs.workflow.version}</version>
-			</dependency>
-			
-			<!-- JUnit Tests -->
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.8.1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mockito</groupId>
-				<artifactId>mockito-all</artifactId>
-				<version>1.9.5</version>
 			</dependency>
 			
 			<!-- Spring dependencies -->
@@ -43,19 +31,18 @@ To get started with the examples, you need to include Spring MVC in your Maven p
 				<artifactId>spring-core</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
-	
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
-	
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
 		</dependencies>
+	...
 
 		
 ## JAXB Integration
@@ -65,6 +52,8 @@ Since Spring 3, one of the feature of “mvc:annotation-driven“, is the suppor
 
 See the following example code:
 
+
+```java
 	  @PostMapping("data")
 	  public ResponseEntity<?> getData(@RequestBody XMLDocument requestXML) {
 	    // consume xml request
@@ -82,7 +71,7 @@ See the following example code:
 	    return ResponseEntity.ok().body(XMLDocumentAdapter.getDocument(resultData));
 	
 	  }
-
+```
 
 The XMLDocument provided by the Imixs-Workflow XML objects can be adapted into the [ItemCollection](https://www.imixs.org/doc/core/itemcollection.html). class providing a large list of methods to build complex data objects within a business process. 
 

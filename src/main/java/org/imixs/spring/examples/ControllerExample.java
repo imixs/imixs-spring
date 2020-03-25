@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ControllerExample {
 
 
-  /**
+  /** 
    * GET Example
    * <p>
    * Creates a new document with the item '_name' and returns a XMLDocument data structure.
